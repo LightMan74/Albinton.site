@@ -1,0 +1,439 @@
+/*********************************************************
+I TRIED TO MAKE THIS EASY TO STYLE! SEE NOTES BELOW
+**********************************************************/
+
+
+
+@media all
+{
+	
+	
+#mymenu a.icon {
+position: absolute;
+	top: -9999px;
+	left: -9999px;
+}
+#mymenu {
+	/*
+		This is just the holder and how you want what is behind the
+		main menu links too look like
+	*/
+	width: calc(100%-150px);
+	background-color:var(--color1);
+	padding-left:10px;
+}
+
+#mymenu #nav1 {
+  display: block;
+}
+#mymenu #barre{
+margin-top: 0.4vw;
+  display: inline-block;
+float: left;
+}
+#mymenu #croix{
+margin-top: 0.4vw;
+  display: none;
+float: left;
+}
+ #mymenu #nav1 #acc{
+  position: absolute;
+  top: -9999px;
+  left: -9999px;
+}
+
+.mysubmenu {
+	/*
+		OVER ALL LINE HEIGHT
+	*/
+	line-height:40px;
+	  display: block;
+}
+.mysubmenu a {
+	/* The minimum width of the "MAIN" links on top */
+	width:auto;
+	min-width: 0px;
+	font-family: helvetica, verdana, tahoma, arial;
+	text-transform: uppercase;
+	font-size: 1.1vw;
+	display:block;
+	/* padding:8px 8px 0px 10px; */
+	padding-left:55px;
+	padding-right:55px;
+	padding-top:5px;						
+	padding-bottom:0px;
+	color: #000;
+	text-decoration:none;
+	
+}
+.mysubmenu a img{
+	/* The minimum width of the "MAIN" links on top */
+	float: left;
+	padding-left:10px;
+	padding-right:10px;
+	padding-top:0px;						
+	padding-bottom:0px;
+	
+}
+.mysubmenu a:hover{
+	background-color: var(--colorborder); /* #ddd; */
+  /* color: black; */
+	color:#fff;
+}
+
+.mysubmenu  a.bis:hover{
+	background-color:var(--color1);
+	color: #fff;
+}
+.mysubmenu ul {
+	top:40px;
+}
+.mysubmenu li ul a{
+	/* The width of the mysubmenu and popout menu */
+	width: 300px;
+	background-color:var(--color1);
+	/*
+		Optional thought i'd make the drop down and popout transparent
+		This line is also what is killing the CSS validation
+	*/
+	filter:alpha(opacity=90);-moz-opacity:.90;opacity:.90;
+}
+.mysubmenu li ul {
+	border-top: solid 1px var(--color1);
+	/* time for some math  {a}:width + {a}:padding + {a}:border */
+	width:300px;
+}
+.mysubmenu li ul li{
+	/* time for some math  {a}:width + {a}:padding + {a}:border */
+	width:360px;
+}
+.mysubmenu li ul li a{
+	border-bottom: solid 1px var(--colorborder);
+	border-top: solid 1px var(--colorborder);
+	border-left: solid 1px var(--colorborder);
+	border-right: solid 1px var(--colorborder);
+}
+.mysubmenu a.popout:before{
+	padding-top:7px;
+	margin-right:-50px;
+float:right;
+content:url(menu/popout.gif);
+}
+.mysubmenu a.popout90:before{	
+	padding-top:7px;
+float:right;
+content:url(menu/popout90.gif);
+}
+
+
+/************************************************************
+ONLY EDIT BELOW IF YOU REALLY KNOW WHAT YOUR DOING!
+************************************************************/
+.mysubmenu {
+	margin:0;
+	padding:0;
+	list-style-type:none;
+}
+.mysubmenu ul{
+	margin:0;
+	padding:0;
+	list-style-type:none;
+}
+.mysubmenu a {
+	display:inline-block;
+}
+.mysubmenu li{
+	float:left;
+	position:relative;
+	display: block;
+}
+.mysubmenu ul {
+	position:absolute;
+	display:none;
+}
+.mysubmenu li ul a{
+	float:left;
+}
+.mysubmenu li ul {
+	float:left;
+}
+.mysubmenu li ul li{
+	float:left;
+	position:relative;
+}
+.mysubmenu ul ul{
+	top:0;
+	left:100%;
+}
+.mysubmenu li ul ul {
+	width:auto;
+	margin: 0px 0px 0px 0px;
+	float:left;
+}
+.mysubmenu li:hover ul ul, .mysubmenu li:hover ul ul ul, .mysubmenu li:hover ul ul ul ul{
+	display:none;
+}
+.mysubmenu li:hover ul, .mysubmenu li li:hover ul, .mysubmenu li li li:hover ul, .mysubmenu li li li li:hover ul{
+	display:block;
+}
+}
+
+@media (max-width: 1375px) and (min-width: 850px)
+{
+    .mysubmenu a {
+	font-size: 1.25vw;
+	padding-right: 25px;
+	padding-left: 25px;
+}
+.mysubmenu a img{
+	/* The minimum width of the "MAIN" links on top */
+	float: left;
+	padding-left:0px;
+	padding-right:5px;
+	padding-top:6px;						
+	padding-bottom:0px;
+	max-height: 25px;
+	max-width: 25px;
+}
+#mymenu a.icon {
+position: absolute;
+	top: -9999px;
+	left: -9999px;
+}
+.mysubmenu li ul a{
+	width: 150px;
+}
+.mysubmenu li ul {
+	width:300px;
+}
+.mysubmenu li ul li{
+	width:165px;
+}
+.mysubmenu a.popout:before{
+	margin-right:-10px;
+}
+}
+@media (max-width: 850px)
+{
+
+/*  .mysubmenu{
+	position: absolute;
+	top: -9999px;
+	left: -9999px;
+ } */
+#mymenu {
+	max-height:76vh;
+  overflow: hidden;
+  background-color: var(--color1);
+  position: relative;
+  padding-left: 0px;
+  border-bottom: solid 1px var(--colorborder);
+
+}
+
+#mymenu #nav1 {
+  display: none;
+/* overflow : scroll;   
+-webkit-overflow-scrolling : auto; */
+overflow-y: auto;
+overflow-x: hidden;
+max-height: 75vh;
+scrollbar-color: var(--colorborder) var(--color1);
+scrollbar-width: auto;
+}
+
+#mymenu #nav1 #acc{
+	float:none;
+	position:relative;
+	display: block;
+top: 0px;
+  left: 0px;
+} 
+
+#mymenu a {
+  color: #000;
+  padding: 10px 15px;
+  text-decoration: none;
+  font-size: 3vw;
+  display: block;
+  max-height: 25px;
+}
+#mymenu  a.bis:hover{
+	background-color:var(--color1);
+	color:#000;
+}
+#mymenu a .text img{
+/* float:right;
+display: block;
+max-height:40px;
+margin-top:-12px;
+padding-left:5px; */
+min-height:40px;
+	max-height:40px;
+float:right;
+display:block;
+padding-left:5px;
+Margin-top: calc(35px * -0.25);
+}
+#mymenu a.icon {
+/*   background: var(--color1);
+  border-bottom: solid 3px var(--colorborder);
+  display: block;
+  position: relative;
+  left: 0;
+  top: 0;
+  max-height:25px; */
+    background: var(--color1);
+  border-bottom: solid 3px var(--colorborder);
+  display: block;
+  position: relative;
+  left: 0;
+  top: 0;
+  min-height:25px;
+  max-height:55px;
+}
+
+#mymenu a:hover {
+  background-color: var(--colorborder);
+  color: #fff;
+}
+
+.mysubmenu a img{
+	/* The minimum width of the "MAIN" links on top */
+	float: left;
+	padding-left:0px;
+	padding-right:5px;
+	padding-top:0px;						
+	padding-bottom:0px;
+	max-height: 25px;
+	max-width: 25px;
+}
+
+.mysubmenu a p{
+  color: white;
+  padding: 10px 0px;
+  text-decoration: none;
+  margin: auto;
+}
+.active {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.mysubmenu ul {
+	top:0px;
+
+
+}
+.mysubmenu li ul a{
+	/* The width of the mysubmenu and popout menu */
+	width: 100%;
+
+	/*
+		Optional thought i'd make the drop down and popout transparent
+		This line is also what is killing the CSS validation
+	*/
+float:none;
+	position:relative;
+	display: block;
+
+}
+.mysubmenu li ul {
+	border-top: solid 1px var(--color1);
+	/* time for some math  {a}:width + {a}:padding + {a}:border */
+	width:100%;
+	left:1%;
+	float:none;
+	position:relative;
+	display: block;
+}
+.mysubmenu li ul li{
+	/* time for some math  {a}:width + {a}:padding + {a}:border */
+	width:100%;
+	left:1%;
+	float:none;
+	position:relative;
+	display: block;
+	
+}
+.mysubmenu li ul li a{
+	border-bottom: solid 0px var(--colorborder);
+	border-top: solid 0px var(--colorborder);
+	border-left: solid 0px var(--colorborder);
+	border-right: solid 0px var(--colorborder);
+}
+
+ .mysubmenu {
+	margin:0;
+	padding:0;
+	list-style-type:none;
+line-height:25px;
+}
+.mysubmenu ul{
+	margin:0;
+	padding:0;
+	list-style-type:none;
+}
+.mysubmenu a {
+	display:block;
+
+}
+.mysubmenu li{
+	float:none;
+	position:relative;
+	display: block;
+			border-bottom: solid 0px var(--colorborder);
+			border-left: solid 1px var(--colorborder);
+			border-top: solid 1px var(--colorborder);
+			}
+.mysubmenu ul {
+	position:relative;
+	display:none;
+}
+.mysubmenu li ul a{
+	float:none;
+}
+.mysubmenu li ul {
+	float:none;
+}
+.mysubmenu li ul li{
+	float:none;
+	position:relative;
+padding-left:1%;
+}
+.mysubmenu li ul a{
+	/* The width of the mysubmenu and popout menu */
+	float:none;
+	position:relative;
+}
+.mysubmenu ul ul{
+	top:0;
+	left:1%;
+}
+.mysubmenu li ul ul {
+	width:auto;
+	margin: -1px 0px 0px 0px;
+	float:none;
+}
+.mysubmenu a.popout:before{
+margin-top:-2px;
+padding-top:0px;
+margin-right:0px;
+float:left;
+content:url(menu/popout90.gif);
+}
+.mysubmenu a.popout90:before{	
+margin-top:-2px;
+padding-top:0px;
+float:left;
+content:url(menu/popout90.gif);
+}
+}
+/* @media (max-width: 350px)
+{
+#mymenu a .text img{
+	position: absolute;
+	top: -9999px;
+	left: -9999px;
+}
+} */
