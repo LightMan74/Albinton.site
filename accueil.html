@@ -35,35 +35,36 @@
   <div id="contenu">
     <div href="javascript:void(0);" onmouseover="msover(1)" onmouseout="msover(0)" onclick="msover(2)">
       <ul class="tabs">
-        <li><a id="v0" href="#view0">VACANCE DE FEVRIER</a></li>
-        <li><a id="v1" href="#view1">NUIT DU BAD 2022</a></li>
+        <li><a id="v0" href="#view0">VACANCE DE AVRIL</a></li>
+        <li><a id="v1" href="#view1">PHOTOS NUIT DU BAD 2022</a></li>
         <li><a id="v2" href="#view2">RASSEMBLEMENT FEDERAL 2022</a></li>
 
       </ul>
       <div class="tabcontents">
 
-        <!-- <div id="view0"> -->
+
         <div id="view0" data="./Accueil/OuvertureVacance.html">
         </div>
-        <div id="view1" data="./Accueil/ndb2022.html">
+        <div id="view1" data="./Accueil/photosndb2022.html">
         </div>
-        <div id="view2" data="./Accueil/RF2022.html"></div>
+        <div id="view2" data="./Accueil/RF2022.html">
+        </div>
+
+
+        <script>
+          $(function () {
+            $("#view0").load("./Accueil/OuvertureVacance.html");
+            $("#view1").load("./Accueil/photosndb2022.html");
+            $("#view2").load("./Accueil/rf2022.html");
+          });
+        </script>
+
+
       </div>
-
-      <script>
-        $(function () {
-          $("#view0").load("./Accueil/OuvertureVacance.html");
-          $("#view1").load("./Accueil/ndb2022.html");
-          $("#view2").load("./Accueil/rf2022.html");
-        });
-      </script>
-
 
     </div>
 
   </div>
-
-</div>
 </div>
 
 </div>
